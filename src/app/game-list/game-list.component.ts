@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from './game.model';
 
 @Component({
   selector: 'app-game-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameListComponent implements OnInit {
 
-  constructor() { }
+  public games: Game[] = [
+    {title:  "a"}
+  ];
+  constructor() {
+
+    
+  }
 
   ngOnInit(): void {
+    console.log('aaaaa');
   }
 
 }
