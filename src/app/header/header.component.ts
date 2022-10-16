@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChildren('ThatReference')
+    menu: ElementRef;
+
+  public openedMenu: boolean  = false;
+
+  constructor(element: ElementRef) { 
+    this.menu = element.nativeElement;
+  }
 
   ngOnInit(): void {
+
+    
+
+    this.openMenu();
+
   }
+
+  public openMenu():  void {
+   this.openedMenu = !this.openedMenu;
+  }
+
 
 }

@@ -1,10 +1,15 @@
 <div class="header-wrapper">
     <img class="header-wrapper__logo" src="https://www.healthyfoodhouse.com/wp-content/uploads/2015/03/14-secret-powers-of-lemon-768x511.jpg" >
     <div class="header-wrapper__title"><b>M<span>i</span>lo<span>ne</span>s</b></div>
-    <ul class="header-wrapper__menu">MENU
-        <li>Sobre nosotros</li>
-        <li>Valoranos</li>
-        <li>Copyright</li>
-    </ul>
+    
+    
+    <div  class="header-wrapper__menu" (click)="openMenu()">
+
+            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'"
+            class="stick stick-1"></div>
+            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'" class="stick stick-2"></div>
+            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'" class="stick stick-3"></div>
+
+    </div>
 
 </div>
