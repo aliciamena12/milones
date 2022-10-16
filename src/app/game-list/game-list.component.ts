@@ -8,16 +8,19 @@ import { Game } from './game.model';
 })
 export class GameListComponent implements OnInit {
 
-  public games: Game[] = [
-    {title:  "a"}
-  ];
+  public games: Array<Game> = [
+    {title: 'Milones'},
+    {title: 'Verdad o reto'},
+    {title:'Yo nunca'},
+    {title: 'Triman'},
+    {title: 'All in'},
+
+   ];
   constructor() {
 
     
   }
 
-  ngOnInit(): void {
-    console.log('aaaaa');
-  }
+  ngOnInit(): void {}
 
 }
