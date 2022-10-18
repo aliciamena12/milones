@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ContainerComponent } from './container/container.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameComponent } from './game/game.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { GameComponent } from './game/game.component';
     HeaderComponent,
     ContainerComponent,
     GameListComponent,
-    GameComponent
+    GameComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule
