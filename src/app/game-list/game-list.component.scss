@@ -1,7 +1,6 @@
 @use '../../assets/meta/' as *;
 
 .game-list {
-
     &__wrapper{
         display: flex;
         flex-direction: column;
@@ -10,14 +9,26 @@
         padding: 0 30px;
     }
 
-
     &__item {
-        background-color: $color-dark-pink;
+        background-color: $color-neon-blue;
         list-style: none;
         margin: 0;
         padding: 20px 40px;
         text-align: center;
         font-size: 2em;
         border-radius: 5px;
+
+        &--first {
+            background-color: $color-neon-purple;
+        }
+        &--second {
+            background-color: $color-neon-red;
+        }
+        &--third {
+            background-color: $color-neon-magenta;
+        }
+        &--fourth {
+            background-color: $color-neon-green;
+        }
     }
 }
