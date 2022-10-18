@@ -9,8 +9,6 @@ export class AppComponent implements OnInit{
 
   public title: string = 'milones';
   public name: string = 'milones';
-  public ngOnInit() {
-    console.log(this.title);
-  }
+  public ngOnInit() {}
 
 }
