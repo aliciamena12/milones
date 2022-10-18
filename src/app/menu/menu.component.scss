@@ -1,0 +1,47 @@
+@use '../../assets/meta/' as *;
+
+.menu {
+  &__wrapper { 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+
+ 
+  height: 92vh; //TO-DO hacer un calc con la altura real
+  }
+
+  &__element {
+    
+    margin: 20px ;
+    padding: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    border-radius: 50px;
+
+    border: 5px solid $color-neon-yellow;
+    box-shadow: inset 0 0 25px $color-neon-yellow-shadow, 0 0 30px $color-neon-yellow-shadow;
+
+    
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 2em;
+  }
+
+
+}
+
+    
