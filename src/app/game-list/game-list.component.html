@@ -1,5 +1,11 @@
-<ul class="game-list__wrapper" *ngFor="let game of games">
-    <li class="game-list__item">
+<ul class="game-list__wrapper" *ngFor="let game of games;  let i = index">
+    <li #gameElement class="game-list__item"
+    [ngClass]="{
+        'game-list__item--first': i === 1,
+        'game-list__item--second': i === 2,
+        'game-list__item--third': i === 3,
+        'game-list__item--fourth': i === 4
+      }">
         {{ game.title }}
     </li>
 </ul>
