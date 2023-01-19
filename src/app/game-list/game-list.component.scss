@@ -31,4 +31,9 @@
             background-color: $color-neon-green;
         }
     }
+
+    &__item-link {
+        color: $color-white;
+        text-decoration: none;
+    }
 }

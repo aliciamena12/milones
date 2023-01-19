@@ -228,3 +228,31 @@
 
 
 }
+
+.menu {
+    position: absolute;
+    width: 100%;
+    margin-top: -800px;
+
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay:  1s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+// .showMenu {
+
+// }
+
+.hideMenu {
+    visibility: hidden;
+}
+
+
+@-webkit-keyframes slide {
+    100% { margin-top: 110px;  }
+}
+
+@keyframes slide {
+    100% { margin-top: 110px; }
+}

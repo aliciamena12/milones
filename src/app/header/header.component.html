@@ -3,9 +3,13 @@
     <div class="header-wrapper__title"><b>M<span>i</span>lo<span>ne</span>s</b></div>
     
     
-    <div  class="header-wrapper__menu" (click)="openMenu()">
-            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'" class="stick stick-1"></div>
-            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'" class="stick stick-2"></div>
-            <div #ThatReference [ngClass]="openedMenu ? 'open' : 'close'" class="stick stick-3"></div>
+    <div  class="header-wrapper__menu" (click)="toggleMenuIcon()">
+            <div #ThatReference [ngClass]="openedMenu ? 'close' : 'open'" class="stick stick-1"></div>
+            <div #ThatReference [ngClass]="openedMenu ? 'close' : 'open'" class="stick stick-2"></div>
+            <div #ThatReference [ngClass]="openedMenu ? 'close' : 'open'" class="stick stick-3"></div>
     </div>
+
+    <app-menu class="menu" [ngClass]="openedMenu ? 'hideMenu' : 'showMenu'">
+
+    </app-menu>
 </div>

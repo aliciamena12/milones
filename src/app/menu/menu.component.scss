@@ -1,32 +1,35 @@
 @use '../../assets/meta/' as *;
 
 .menu {
+
+
   &__wrapper { 
+
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
   margin: 0;
   padding: 0;
+  padding-bottom: 55px;
+
   margin-right: auto;
   margin-left: auto;
-
-
- 
-  height: 92vh; //TO-DO hacer un calc con la altura real
+  height: 82vh; //TO-DO hacer un calc con la altura real
+  background-color: $color-night;
   }
 
   &__element {
     
     margin: 20px ;
-    padding: 0px;
+    padding: 0 40px;
     align-items: center;
     display: flex;
     justify-content: center;
     list-style: none;
     background-color: transparent;
-    width: 80%;
-    height: 100%;
+    width: 65%;
+    height: 100vh;
     border-radius: 50px;
 
     border: 5px solid $color-neon-yellow;

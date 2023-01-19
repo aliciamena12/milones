@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,9 @@ export class HeaderComponent implements OnInit {
   @ViewChildren('ThatReference')
     menu: ElementRef;
 
+  @Output()
+  toggleMenu = new EventEmitter<boolean>();
+
   public openedMenu: boolean  = false;
 
   constructor(element: ElementRef) { 
@@ -17,15 +20,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    
-
-    this.openMenu();
-
+    this.toggleMenuIcon();
   }
 
-  public openMenu():  void {
+  public toggleMenuIcon():  void {
    this.openedMenu = !this.openedMenu;
+   this.toggleMenu.emit(this.openedMenu);
+  }
+
+  public procesatoggle() {
+
   }
 
 

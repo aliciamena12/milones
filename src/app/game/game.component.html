@@ -1,8 +1,16 @@
 <div class="game-wrapper">
-    <h1  class="game__title">Yo nunca...</h1>
+    <div class="number-generator__container" *ngIf="this.gameName === 'Milones' || this.gameName === 'Triman'">
+        <app-number-generator></app-number-generator>
+    </div>
+    <h1 class="game__title"
+    *ngIf="!(this.gameName === 'Milones' || this.gameName === 'Triman')">Yo nunca...</h1>
     <ng-container>
         <div class="game__sentence">
             {{ sentences[0] }}
         </div>
+        <button class="next-button"
+        *ngIf="!(this.gameName === 'Milones' || this.gameName === 'Triman')">
+            <p class="next-button__text">Next</p>
+        </button>
     </ng-container>
 </div>

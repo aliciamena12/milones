@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-game',
@@ -11,8 +12,17 @@ export class GameComponent implements OnInit {
     'frase uno',
     'frase dos'
   ];
+
+  public gameName: string  = '';
   
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) document: any) {
+    //myArray = this.string.split('/');
+    console.log(document.location.href);
+    this.gameName = document.location.href.split("/").pop();
+    console.log(this.gameName);
+
+  }
 
   ngOnInit(): void {
   }

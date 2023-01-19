@@ -6,6 +6,6 @@
         'game-list__item--third': i === 3,
         'game-list__item--fourth': i === 4
       }">
-        {{ game.title }}
+        <a href="{{'game/' + game.title.split(' ').join('')}}" class="game-list__item-link">{{ game.title }}</a>
     </li>
 </ul>

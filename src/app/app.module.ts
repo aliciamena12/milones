@@ -7,6 +7,8 @@ import { ContainerComponent } from './container/container.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameComponent } from './game/game.component';
 import { MenuComponent } from './menu/menu.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NumberGeneratorComponent } from './number-generator/number-generator.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { MenuComponent } from './menu/menu.component';
     ContainerComponent,
     GameListComponent,
     GameComponent,
-    MenuComponent
+    MenuComponent,
+    NumberGeneratorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
